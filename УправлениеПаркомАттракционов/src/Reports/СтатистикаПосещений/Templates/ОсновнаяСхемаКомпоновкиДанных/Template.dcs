@@ -7,8 +7,8 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Аттракцион</dataPath>
-			<field>Аттракцион</field>
+			<dataPath>ВидАттракциона</dataPath>
+			<field>ВидАттракциона</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -53,7 +53,7 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	АктивныеПосещенияОстаткиИОбороты.Аттракцион,
+	АктивныеПосещенияОстаткиИОбороты.ВидАттракциона,
 	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийНачальныйОстаток,
 	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийПриход,
 	АктивныеПосещенияОстаткиИОбороты.КоличествоПосещенийРасход,
@@ -62,22 +62,17 @@
 ИЗ
 	РегистрНакопления.АктивныеПосещения.ОстаткиИОбороты(,, День,,) КАК АктивныеПосещенияОстаткиИОбороты</query>
 	</dataSet>
-	<totalField>
-		<dataPath>КоличествоПосещенийКонечныйОстаток</dataPath>
-		<expression>Сумма(КоличествоПосещенийКонечныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоПосещенийНачальныйОстаток</dataPath>
-		<expression>Сумма(КоличествоПосещенийНачальныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоПосещенийПриход</dataPath>
-		<expression>Сумма(КоличествоПосещенийПриход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоПосещенийРасход</dataPath>
-		<expression>Сумма(КоличествоПосещенийРасход)</expression>
-	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -93,8 +88,6 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаНачала</expression>
-		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -111,19 +104,6 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаОкончания</expression>
-		<availableAsField>false</availableAsField>
-	</parameter>
-	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -174,6 +154,12 @@
 					<dcsset:userSettingID>24703bc7-cb67-4e41-8602-ca08ee7da26e</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
@@ -191,7 +177,7 @@
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Аттракцион</dcsset:field>
+							<dcsset:field>ВидАттракциона</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						</dcsset:item>
