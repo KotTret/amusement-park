@@ -63,5 +63,6 @@
   <informationRegisters>InformationRegister.АктуальнаяШкалаБонуснойПрограммы</informationRegisters>
   <informationRegisters>InformationRegister.ЦеныНоменклатуры</informationRegisters>
   <accumulationRegisters>AccumulationRegister.АктивныеПосещения</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.БонусныеБаллыКлиентов</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Продажи</accumulationRegisters>
 </mdclass:Configuration>

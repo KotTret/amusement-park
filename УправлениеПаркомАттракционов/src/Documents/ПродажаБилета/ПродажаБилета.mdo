@@ -35,6 +35,7 @@
   <defaultObjectForm>Document.ПродажаБилета.Form.ФормаДокумента</defaultObjectForm>
   <registerRecords>AccumulationRegister.АктивныеПосещения</registerRecords>
   <registerRecords>AccumulationRegister.Продажи</registerRecords>
+  <registerRecords>AccumulationRegister.БонусныеБаллыКлиентов</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="3164a6e4-dee6-4e97-9f2c-0bffec60b8d9">
