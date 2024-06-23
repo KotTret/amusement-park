@@ -60,7 +60,6 @@
   <enums>Enum.ВидНоменклатуры</enums>
   <reports>Report.ПродажиПоАттракционам</reports>
   <reports>Report.СтатистикаПосещений</reports>
-  <dataProcessors>DataProcessor.ПереходНаНовыеВерсии1</dataProcessors>
   <dataProcessors>DataProcessor.ПереходНаНовыеВерсиии</dataProcessors>
   <dataProcessors>DataProcessor.РабочееМестоКассира</dataProcessors>
   <informationRegisters>InformationRegister.АктуальнаяШкалаБонуснойПрограммы</informationRegisters>

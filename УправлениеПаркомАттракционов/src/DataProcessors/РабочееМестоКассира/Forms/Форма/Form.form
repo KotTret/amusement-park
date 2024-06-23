@@ -79,6 +79,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Продажи.Номенклатура</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПродажиНоменклатураПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ПродажиНоменклатураРасширеннаяПодсказка</name>
             <id>19</id>
@@ -129,6 +133,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Продажи.Цена</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПродажиЦенаПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ПродажиЦенаРасширеннаяПодсказка</name>
             <id>22</id>
@@ -179,6 +187,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Продажи.Количество</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПродажиКоличествоПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>ПродажиКоличествоРасширеннаяПодсказка</name>
             <id>25</id>
@@ -282,6 +294,10 @@
         <handlers>
           <event>Drag</event>
           <name>ПродажиПеретаскивание</name>
+        </handlers>
+        <handlers>
+          <event>OnChange</event>
+          <name>ПродажиПриИзменении</name>
         </handlers>
         <searchStringAddition>
           <visible>true</visible>
@@ -459,6 +475,10 @@
           <dataPath xsi:type="form:DataPath">
             <segments>БаллыКСписанию</segments>
           </dataPath>
+          <handlers>
+            <event>OnChange</event>
+            <name>БаллыКСписаниюПриИзменении</name>
+          </handlers>
           <extendedTooltip>
             <name>БаллыКСписаниюРасширеннаяПодсказка</name>
             <id>31</id>
@@ -1376,6 +1396,11 @@
     <use>
       <common>true</common>
     </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗаписатьПродажу</name>
+      </handler>
+    </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <commandInterface>
